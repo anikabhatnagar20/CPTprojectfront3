@@ -1,13 +1,12 @@
 ---
 comments: True
 layout: base
-title: Home Page 
-description: The home page with each seperate feature, should be allowed to access after logging in
+title: After Login 
+description: This is the page that has all the fatures that are avaliable to the user
 courses: {'compsci': {'week': 4}}
 type: hacks
-permalink: /Home
+permalink: /sechome
 ---
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,9 +19,9 @@ permalink: /Home
 <div class="collage-background">
   <!-- Content over the collage background goes here -->
 </div>
-
     <div class="button-container">
         <button id="my-reviews"><a href='{{site.baseurl}}/Review'> Create a Review 
         <button id="my-favorites"><a href='{{site.baseurl}}/Favreads'>Favorite Reads
       <button id="reading-list"><a href='{{site.baseurl}}/Reccom'>Reccomendations page
+    
     
