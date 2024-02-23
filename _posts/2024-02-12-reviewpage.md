@@ -10,8 +10,10 @@ permalink: /Review
 <html lang="en">
 <head>
     <style>
+        body, input, textarea, button, h2, h3, label { /* Add more selectors as needed */
+            font-family: 'Times New Roman', Times, serif; /* This ensures consistency */
+        }
         body {
-            font-family: 'Times New Roman', Times, serif;
             margin: 50px;
         }
         textarea, input[type="text"] {
@@ -97,7 +99,7 @@ permalink: /Review
                 .then(data => {
                     // Handle the response data
                     console.log(data);
-                    window.location.href = "{{site.baseurl}}/data/review";
+                    window.location.href = "{{site.baseurl}}/data/database";
                 })
                 .catch(err => {
                     console.error('There was a problem with the fetch operation: ' + err.message);
