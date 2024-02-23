@@ -33,7 +33,7 @@ The script is laid out in a sequence (no function) and will execute when page is
   import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
   // Set Users endpoint (list of users)
-  const url = uri + '/api/users/';
+  const url = uri + '/api/books_review/';
 
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
@@ -59,17 +59,17 @@ The script is laid out in a sequence (no function) and will execute when page is
           for (const row of data) {
             // tr and td build out for each row
             const tr = document.createElement("tr");
-            const name = document.createElement("td");
-            const id = document.createElement("td");
-            const age = document.createElement("td");
+            const title = document.createElement("td");
+            const review = document.createElement("td");
+            const rating = document.createElement("td");
             // data is specific to the API
-            name.innerHTML = row.name; 
-            id.innerHTML = row.uid; 
-            age.innerHTML = row.age; 
+            title.innerHTML = row.title; 
+            review.innerHTML = row.review; 
+            rating.innerHTML = row.rating; 
             // this builds td's into tr
-            tr.appendChild(name);
-            tr.appendChild(id);
-            tr.appendChild(age);
+            tr.appendChild(title);
+            tr.appendChild(review);
+            tr.appendChild(rating);
             // append the row to table
             resultContainer.appendChild(tr);
           }
