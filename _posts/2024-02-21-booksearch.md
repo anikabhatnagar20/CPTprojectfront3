@@ -6,12 +6,14 @@ courses: {'compsci': {'week': 4}}
 type: hacks
 permalink: /booksearch
 ---
-# Book Search
-Looking for a book? Search for it here!
-<html lang="en">
-<style>
-    body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, input, button, div, h3, p, a, h1 { /* Include h1 in the selector list */
             font-family: 'Times New Roman', Times, serif;
+        }
+        body {
             margin: 50px;
         }
         .container {
@@ -21,13 +23,19 @@ Looking for a book? Search for it here!
         .book-search {
             margin-left: 20px;
         }
+        .book-card {
+            border: 1px solid #ddd; /* Adds a light border to each book card for visual separation */
+            margin-bottom: 20px; /* Adds space between book cards */
+            padding: 10px; /* Adds some padding inside each book card */
+        }
+        .book-card img {
+            max-width: 100px; /* Limits image size to keep the layout tidy */
+            height: auto; /* Keeps the image aspect ratio */
+        }
     </style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Search</title>
 </head>
 <body>
+    <h1>Search through and find a book perfect for you!</h1> 
     <!-- Input box for book search -->
     <div>
         <input type="text" id="bookInput" placeholder="Enter a book title">
@@ -87,4 +95,3 @@ Looking for a book? Search for it here!
         }                    
     </script>
 </body>
-</html>
