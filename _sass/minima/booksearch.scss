@@ -1,0 +1,15 @@
+/* Enhanced aesthetic for a rustic, old library look */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif; /* Classic font choice */
+    background-color: #f0e6d2; /* A soft, aged paper-like background color */
+}
+.collage-background {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.aliexpress.com%2Fi%2F1005003917549809.html&psig=AOvVaw02xdgmgikZwMM9webhJLAw&ust=1708735431727000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIicqNWdwIQDFQAAAAAdAAAAABAw');
+    background-size: cover; // Ensures the background covers the entire div area
+    background-position: center; // Centers the background image in the div
+    height: 500px; // Set the desired height for your collage area
+    width: 90%; // Sets the width to be 100% of the container
+    
+}

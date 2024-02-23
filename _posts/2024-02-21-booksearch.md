@@ -6,8 +6,22 @@ courses: {'compsci': {'week': 4}}
 type: hacks
 permalink: /booksearch
 ---
-
+# Book Search
+Looking for a book? Search for it here!
 <html lang="en">
+<style>
+    body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 50px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .book-search {
+            margin-left: 20px;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

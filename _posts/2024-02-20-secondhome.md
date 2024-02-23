@@ -15,13 +15,12 @@ permalink: /sechome
     <link rel="stylesheet" href="home.scss"> 
 </head>
 <body>
-
 <div class="collage-background">
   <!-- Content over the collage background goes here -->
 </div>
     <div class="button-container">
         <button id="my-reviews"><a href='{{site.baseurl}}/Review'> Create a Review 
-        <button id="my-favorites"><a href='{{site.baseurl}}/Favreads'>Favorite Reads
+        <button id="my-favorites"><a href='{{site.baseurl}}/booksearch'>Book Catalog
       <button id="reading-list"><a href='{{site.baseurl}}/Reccom'>Reccomendations page
     
     
