@@ -33,7 +33,7 @@ The script is laid out in a sequence (no function) and will execute when page is
   import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
   // Set Users endpoint (list of users)
-  const url = uri + '/api/books_review/';
+  const url = uri + '/api/book_reviews/';
 
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
