@@ -5,13 +5,13 @@ title: Book Reccomendation
 description: Gives users sugessted books to read
 courses: {'compsci': {'week': 4}}
 type: hacks
-permalink: /Reccom
+permalink: /bookreccom
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Recommendation System</title>
+    <title>Find a book, perfect for you!</title>
     <style>
         body, input, button, div, h3, p, a, h1 {
             font-family: 'Times New Roman', Times, serif;

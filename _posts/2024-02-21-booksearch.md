@@ -5,7 +5,7 @@ title: Book Search
 description: User can search for books using Google API 
 courses: {'compsci': {'week': 4}}
 type: hacks
-permalink: /Reccom
+permalink: /booksearch
 ---
 <html lang="en">
 <head>
