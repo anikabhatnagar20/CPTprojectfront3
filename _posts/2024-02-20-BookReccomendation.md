@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+---
+comments: True
+layout: base
+title: Book Reccomendation 
+description: Gives users sugessted books to read
+courses: {'compsci': {'week': 4}}
+type: hacks
+permalink: /Reccom
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">

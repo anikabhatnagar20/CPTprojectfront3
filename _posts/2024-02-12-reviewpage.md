@@ -62,7 +62,7 @@ permalink: /Review
     <!-- JavaScript to handle the form submission -->
     <script type="module">
         // uri variable and options object are obtained from config.js
-       // import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
+        import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('reviewForm').addEventListener('submit', function(e) {
                 e.preventDefault(); // Prevent the default form submission
@@ -79,9 +79,11 @@ permalink: /Review
                 const body = {
                     title: title,
                     review: review,
-                    rating: ratingValue,
+                    rating: parseInt(ratingValue),
                 };
-                const url =  + '/api/book_reviews/';
+                const url =  uri + '/api/book_reviews/';
+                console.log(JSON.stringify(body));
+                console.log(options);
                 fetch(url, {
                     ...options,
                     method: 'POST',

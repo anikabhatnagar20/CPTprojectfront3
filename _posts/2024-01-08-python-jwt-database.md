@@ -6,7 +6,7 @@ description: An advanced example of database CRUD (Create, Read, Update, Delete)
 permalink: /data/database
 ---
 
-## SQL Database Fetch
+## Reviews
 
 <!-- HTML table layout for page.  The table is filled by JavaScript below. 
 -->
@@ -30,58 +30,50 @@ The script is laid out in a sequence (no function) and will execute when page is
 -->
 <script type="module">
   // uri variable and options object are obtained from config.js
-  import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
-
-  // Set Users endpoint (list of users)
-  const url = uri + '/api/book_reviews/';
-
-  // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
-
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors and display
-      if (response.status !== 200) {
-          const errorMsg = 'Database response error: ' + response.status;
-          console.log(errorMsg);
-          const tr = document.createElement("tr");
-          const td = document.createElement("td");
-          td.innerHTML = errorMsg;
-          tr.appendChild(td);
-          resultContainer.appendChild(tr);
-          return;
-      }
-      // valid response will contain JSON data
-      response.json().then(data => {
-          console.log(data);
-          for (const row of data) {
-            // tr and td build out for each row
+  import { uri, options } from './config.js'; // Adjust the path as necessary
+// Function to fetch book reviews from the database
+function fetchBookReviews() {
+    // Construct the endpoint URL using the base URI
+    const url = `${uri}/api/book_reviews/`;
+    // Reference to the HTML element where the results will be displayed
+    const resultContainer = document.getElementById("result");
+    // Clear previous results
+    resultContainer.innerHTML = '';
+    // Execute the fetch command with the URL and options imported from config.js
+    fetch(url, options)
+        .then(response => {
+            // Check for response status
+            if (!response.ok) { // If response is not ok, throw an error
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+            return response.json(); // Parse JSON data from the response
+        })
+        .then(data => {
+            // Process the data and update the DOM with the fetched data
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                const title = document.createElement("td");
+                const review = document.createElement("td");
+                const rating = document.createElement("td");
+                title.textContent = row.title;
+                review.textContent = row.review;
+                rating.textContent = row.rating;
+                tr.appendChild(title);
+                tr.appendChild(review);
+                tr.appendChild(rating);
+                resultContainer.appendChild(tr);
+            });
+        })
+        .catch(error => {
+            // Handle any errors that occurred during the fetch
+            console.error('Fetch error:', error);
             const tr = document.createElement("tr");
-            const title = document.createElement("td");
-            const review = document.createElement("td");
-            const rating = document.createElement("td");
-            // data is specific to the API
-            title.innerHTML = row.title; 
-            review.innerHTML = row.review; 
-            rating.innerHTML = row.rating; 
-            // this builds td's into tr
-            tr.appendChild(title);
-            tr.appendChild(review);
-            tr.appendChild(rating);
-            // append the row to table
+            const td = document.createElement("td");
+            td.colSpan = 3; // Assuming there are three columns in your table
+            td.textContent = "Failed to load book reviews: " + error.message;
+            tr.appendChild(td);
             resultContainer.appendChild(tr);
-          }
-      })
-  })
-  // catch fetch errors (ie ACCESS to server blocked)
-  .catch(err => {
-    console.error(err);
-    const tr = document.createElement("tr");
-    const td = document.createElement("td");
-    td.innerHTML = err + ": " + url;
-    tr.appendChild(td);
-    resultContainer.appendChild(tr);
-  });
-</script>
+        });
+}
+// Call the function to fetch book reviews when the page loads
+document.addEventListener('DOMContentLoaded', fetchBookReviews);
