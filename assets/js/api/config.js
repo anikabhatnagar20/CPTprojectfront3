@@ -2,7 +2,7 @@ export var uri;
 if (location.hostname === "localhost") {
         uri = "http://localhost:8279";
 } else if (location.hostname === "127.0.0.1") {
-        uri = "http://127.0.0.1:8279";
+        uri = " http://127.0.0.1:8279";
 } else {
         uri = "https://flask2.nighthawkcodingsociety.com";
 }
