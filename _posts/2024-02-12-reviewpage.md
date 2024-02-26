@@ -54,7 +54,7 @@ permalink: /Review
         <input type="radio" name="rating" value="1" id="rating1"><label for="rating1">1</label>
         <input type="radio" name="rating" value="2" id="rating2"><label for="rating2">2</label>
         <input type="radio" name="rating" value="3" id="rating3"><label for="rating3">3</label>
-        <input tympe="radio" name="rating" value="4" id="rating4"><label for="rating4">4</label>
+        <input type="radio" name="rating" value="4" id="rating4"><label for="rating4">4</label>
         <input type="radio" name="rating" value="5" id="rating5"><label for="rating5">5</label>
         <!-- Submit Button -->
         <input type="submit" id="submitReview" value="Submit Review">
