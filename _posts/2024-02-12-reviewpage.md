@@ -86,11 +86,11 @@ permalink: /Review
                 console.log(options);
                 fetch(url, {
                     ...options,
-                    method: 'POST',
+                    method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(body)
+                   //  body: JSON.stringify(body)
                 })
                 .then(response => {
                     if (!response.ok) {

@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+---
+comments: True
+layout: base
+title: Book Search 
+description: User can search for books using Google API 
+courses: {'compsci': {'week': 4}}
+type: hacks
+permalink: /Reccom
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">

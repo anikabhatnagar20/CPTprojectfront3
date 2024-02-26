@@ -30,7 +30,7 @@ The script is laid out in a sequence (no function) and will execute when page is
 -->
 <script type="module">
   // uri variable and options object are obtained from config.js
-  import { uri, options } from './config.js'; // Adjust the path as necessary
+  import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js'; // Adjust the path as necessary
 // Function to fetch book reviews from the database
 function fetchBookReviews() {
     // Construct the endpoint URL using the base URI
