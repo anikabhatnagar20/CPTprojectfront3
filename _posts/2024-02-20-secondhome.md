@@ -38,6 +38,7 @@ permalink: /sechome
     <button id="my-reviews"><a href='{{site.baseurl}}/Review'>Create a Review</a></button>
     <button id="my-favorites"><a href='{{site.baseurl}}/booksearch'>Book Catalog</a></button>
     <button id="reading-list"><a href='{{site.baseurl}}/bookreccom'>Recommendations page</a></button>
+    <button id="reading-list"><a href='{{site.baseurl}}/Favreads'>Recommendations page</a></button>
 </div>
 </body>
 </html>

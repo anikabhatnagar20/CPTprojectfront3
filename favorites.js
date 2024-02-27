@@ -1,31 +1,15 @@
-// favorites.js
+document.addEventListener("DOMContentLoaded", function() {
+    const bookInput = document.getElementById('bookInput');
+    const favoritesTable = document.getElementById('favoritesTable');
 
-document.addEventListener('DOMContentLoaded', function () {
-    const addFavoriteBtn = document.getElementById('addFavoriteBtn');
-    addFavoriteBtn.addEventListener('click', addFavorite);
+    document.getElementById('addFavoriteBtn').addEventListener('click', function() {
+        const bookTitle = bookInput.value.trim();
 
-    function addFavorite() {
-        const bookInput = document.getElementById('bookInput').value;
-
-        // Validate if the input is not empty
-        if (!bookInput.trim()) {
-            alert('Please enter a book title.');
-            return;
+        if (bookTitle !== "") {
+            const newRow = favoritesTable.insertRow();
+            newRow.insertCell(0).innerText = bookTitle;
+            // Clear the input field
+            bookInput.value = "";
         }
-
-        // Assuming you have a function to add the book to the favorites table
-        addToFavoritesTable(bookInput);
-
-        // Clear the input field after adding to favorites
-        document.getElementById('bookInput').value = '';
-    }
-
-    function addToFavoritesTable(bookTitle) {
-        // Assuming you have logic to add the book to the table
-        // For now, let's just create a new row with the title
-        const favoritesTable = document.getElementById('favoritesTable');
-        const newRow = favoritesTable.insertRow();
-        const cell = newRow.insertCell(0);
-        cell.innerHTML = bookTitle;
-    }
+    });
 });
