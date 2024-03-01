@@ -32,7 +32,7 @@ The script is laid out in a sequence (no function) and will execute when page is
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // fetch the API
-  fetch(url, options)
+  fetch("http://10.0.0.36:8086/api/book_reviews/", options)
     // response is a RESTful "promise" on any successful fetch
     .then(response => {
       // check for response errors and display

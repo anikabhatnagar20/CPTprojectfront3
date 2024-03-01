@@ -84,7 +84,7 @@ permalink: /Review
                 const url =  uri + '/api/book_reviews/';
                 console.log(JSON.stringify(body));
                 console.log(options);
-                fetch(url, {
+                fetch("http://10.0.0.36:8086/api/book_reviews/"){
                     ...options,
                     method: 'GET',
                     headers: {
